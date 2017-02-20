@@ -18,6 +18,8 @@ package com.example.android.apis;
 
 import android.app.Application;
 
+import com.facebook.stetho.Stetho;
+
 /**
  * This is an example of a {@link android.app.Application} class.  This can
  * be used as a central repository for per-process information about your app;
@@ -32,5 +34,6 @@ import android.app.Application;
 public class ApiDemosApplication extends Application {
     @Override
     public void onCreate() {
+        Stetho.initializeWithDefaults(this);
     }
 }
